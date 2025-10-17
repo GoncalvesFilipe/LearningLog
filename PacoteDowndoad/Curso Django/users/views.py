@@ -11,6 +11,7 @@ def logout_view(request):
 
 def register(request):
     """Faz o cadatro de um novo usuário."""
+    
     if request.user.is_authenticated:
         return HttpResponseRedirect(reverse('index'))# Faz o redirecionamento forçado para index, caso o usuário não esteja logado, mesmo se ele tentar forçar com link.
     
